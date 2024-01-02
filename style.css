@@ -422,6 +422,20 @@ textarea{
     margin-top: 100px;
 }
 
+.reseau{
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    padding: 100px;
+}
+
+.reseau a img{
+    width: 50px;
+    border-radius: 10px;
+    transition: transform 2s;
+    
+    
+}
 
 /*Section footer*/
 
