@@ -9,7 +9,7 @@ header.header{
     justify-content: space-between;
     align-items: center;
     background-color: #1E90FF;
-    padding: 10px;
+    width: 100%;
 }
 
 
@@ -20,16 +20,17 @@ section::after{
    
 }
 
-.nav nav{
+.nav nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     width: 300px;
     height: 50px;
-   
- 
-    
+}
+
+.nav ul{
+    list-style-type: none;
 }
 
 .nav  li a{
@@ -55,12 +56,16 @@ section::after{
     list-style: none;
 }
 
-.portfolio li a{
+.portfolio a{
     color: white;
     text-decoration: none;
     font-family:sans-serif;
     font-size: 30px;
     margin-left: 5px;
+}
+
+.portfolio img{
+    margin-left: 10px;
 }
 
 /*Présentation*/
@@ -145,23 +150,24 @@ p{
 .experience {
     text-align: center;
     font-family: cursive;
-    align-self: center;
-    justify-self: center;
     background-color: #F8F8FF;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 150px;
+    height: 800px;
     margin: 150px;
     
 }
 
 .content{
-    position: relative;
+   
     display: grid;
     grid-template-columns: 100px, 100px, 100px, 100px;
-    
+    justify-content: center;
     column-gap: 80px;
     gap: 70px;
     padding-bottom: 20px;
+   
 }
 
 .pro{
@@ -260,7 +266,7 @@ h3{
 /*Section hobby*/
 
 .hobby{
-    
+    font-family: cursive;
     text-align: center;
     background-color: #F8F8FF;
     border-radius: 20px;
@@ -352,6 +358,7 @@ h3{
 /*Section Contact*/
 
 .contact{
+    font-family: cursive;
     text-align: center;
     background-color: #F8F8FF;
     border-radius: 20px;
@@ -432,9 +439,17 @@ textarea{
 .reseau a img{
     width: 50px;
     border-radius: 10px;
-    transition: transform 2s;
-    
-    
+
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+
+.reseau :hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
 }
 
 /*Section footer*/
@@ -442,4 +457,64 @@ textarea{
 footer{
     display: flex;
     background-color: #1E90FF;
+}
+
+/*Responsive*/
+/*--tablette--*/
+@media screen and (max-width : 1024px){
+.header{
+  
+}
+.experience{
+    width: 810px;
+    height: 550px;
+}
+.content{
+        gap: 0px;
+        
+    }
+.pro {
+   width: 200px;
+   height: 230px;
+}
+
+.scolaire {
+    width: 200px;
+    height: 230px;
+ }
+
+ 
+ .lien {
+    width: 200px;
+    height: 230px;
+    margin-bottom: 30px;
+ }
+
+ .hobby{
+    width: 810px;
+    height: 1000px;
+ }
+ .hobby-content{
+    display: grid;
+
+ }
+ .iframe{
+    margin-top: 100px;
+    grid-column-start: 2;
+    margin-right: 80px;
+    
+}
+
+.iframe iframe{
+    width: 600px;
+    height: 300px;
+}
+.reseau{
+    margin-top: 280px;
+    margin-left: 120px;
+}
+ 
+
+
+
 }
